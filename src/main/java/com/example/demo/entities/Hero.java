@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 
 import com.example.demo.enums.HeroClass;
+import com.example.demo.enums.HeroStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +19,11 @@ public class Hero {
     private HeroClass heroClass;
 
     private int expPoint =0;
+
+    private int level = 1;
+
+    private HeroStatus status = HeroStatus.ALIVE;
+
 
     public Hero() {
     }
@@ -57,5 +63,21 @@ public class Hero {
 
     public void setExpPoint(int expPoint) {
         this.expPoint = expPoint;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public HeroStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(HeroStatus status) {
+        this.status = status;
     }
 }
